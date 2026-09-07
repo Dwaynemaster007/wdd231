@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    .navigation {
+        display: block;
+        grid-column: auto;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .certificate-card {
+        grid-column: 1 / -1;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

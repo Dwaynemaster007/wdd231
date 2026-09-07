@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #0056b3;
+    --primary-hover: #003d80;
+    --completed-bg: #d4edda;
+    --completed-text: #155724;
+    --not-completed-bg: #f8d7da;
+    --not-completed-text: #721c24;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Grid Layout */
+header {
+    display: grid;
+    grid-template-columns: auto 44px;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Hamburger Icon */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    color: var(--primary-color);
+}
+
+.hamburger::before {
+    content: "\2630"; /* ☰ Hamburger Icon */
+}
+
+.hamburger.show::before {
+    content: "\00D7"; /* × Close Icon */
+}
+
+/* Navigation - Mobile */
+.navigation {
+    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.navigation .current a {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Main Content & Cards */
+main {
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card figure {
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Course List & Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    min-height: 44px;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.course-card {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    border-left: 5px solid var(--primary-color);
+}
+
+.course-card.completed {
+    background-color: var(--completed-bg);
+    color: var(--completed-text);
+    border-left-color: var(--completed-text);
+}
+
+.course-card.not-completed {
+    background-color: var(--not-completed-bg);
+    color: var(--not-completed-text);
+    border-left-color: var(--not-completed-text);
+}
+
+.credits-summary {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
