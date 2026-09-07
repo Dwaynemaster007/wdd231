@@ -12,10 +12,10 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    color: #212529;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
 }
@@ -25,9 +25,9 @@ header {
     display: grid;
     grid-template-columns: auto 44px;
     align-items: center;
-    background-color: var(--card-bg);
+    background-color: #ffffff;
     padding: 0.75rem 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px #0000001a;
 }
 
 .logo-container {
@@ -36,18 +36,18 @@ header {
     gap: 0.75rem;
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #0056b3;
 }
 
 /* Hamburger Icon */
 .hamburger {
-    background: none;
+    background: transparent;
     border: none;
     font-size: 1.75rem;
     cursor: pointer;
     min-width: 44px;
     min-height: 44px;
-    color: var(--primary-color);
+    color: #0056b3;
 }
 
 .hamburger::before {
@@ -79,13 +79,13 @@ header {
     display: block;
     padding: 0.75rem 1rem;
     text-decoration: none;
-    color: var(--primary-color);
+    color: #0056b3;
     font-weight: 600;
     border-radius: 4px;
 }
 
 .navigation .current a {
-    background-color: var(--primary-color);
+    background-color: #0056b3;
     color: #ffffff;
 }
 
@@ -97,9 +97,9 @@ main {
 }
 
 h1 {
-    color: var(--primary-color);
+    color: #0056b3;
     text-align: center;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid #dee2e6;
     padding-bottom: 0.5rem;
 }
 
@@ -110,11 +110,11 @@ h1 {
 }
 
 .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 1.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px #0000000d;
 }
 
 .card figure {
@@ -137,9 +137,9 @@ h1 {
 
 .filter-buttons button {
     padding: 0.5rem 1rem;
-    border: 1px solid var(--primary-color);
-    background-color: transparent;
-    color: var(--primary-color);
+    border: 1px solid #0056b3;
+    background-color: #ffffff;
+    color: #0056b3;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
@@ -148,7 +148,7 @@ h1 {
 
 .filter-buttons button.active,
 .filter-buttons button:hover {
-    background-color: var(--primary-color);
+    background-color: #0056b3;
     color: #ffffff;
 }
 
@@ -162,19 +162,19 @@ h1 {
     padding: 0.75rem 1rem;
     border-radius: 6px;
     font-weight: bold;
-    border-left: 5px solid var(--primary-color);
+    border-left: 5px solid #0056b3;
 }
 
 .course-card.completed {
-    background-color: var(--completed-bg);
-    color: var(--completed-text);
-    border-left-color: var(--completed-text);
+    background-color: #d4edda;
+    color: #155724;
+    border-left-color: #155724;
 }
 
 .course-card.not-completed {
-    background-color: var(--not-completed-bg);
-    color: var(--not-completed-text);
-    border-left-color: var(--not-completed-text);
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #721c24;
 }
 
 .credits-summary {
@@ -187,8 +187,8 @@ h1 {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: var(--card-bg);
-    border-top: 1px solid var(--border-color);
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
     margin-top: 2rem;
 }
 
