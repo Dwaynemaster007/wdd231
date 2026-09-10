@@ -31,39 +31,3 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
-
-/* Grid View */
-#members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-}
-
-#members-container.grid .member-card {
-    background-color: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-align: center;
-}
-
-/* List View */
-#members-container.list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-#members-container.list .member-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    align-items: center;
-    padding: 0.75rem 1rem;
-    background-color: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-}
-
-#members-container.list .member-card img {
-    display: none; /* Hide images in list mode */
-}
