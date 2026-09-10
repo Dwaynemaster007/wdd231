@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Eswatini Royal Insurance Corporation",
+    "address": "Mbabane / Manzini, Eswatini",
+    "phone": "+268 2505 2000",
+    "website": "https://www.sric.sz",
+    "image": "sric.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Living Waters Exploration",
+    "address": "Manzini Industrial Site, Eswatini",
+    "phone": "+268 2505 1234",
+    "website": "https://example.com",
+    "image": "livingwaters.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "FNB Eswatini",
+    "address": "Manzini Branch, Eswatini",
+    "phone": "+268 2508 1000",
+    "website": "https://www.fnb.co.sz",
+    "image": "fnb.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Macmillan Education Eswatini",
+    "address": "Matsapha, Eswatini",
+    "phone": "+268 2518 4567",
+    "website": "https://example.com",
+    "image": "macmillan.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Manzini Traders Co.",
+    "address": "Central Market, Manzini",
+    "phone": "+268 2505 9999",
+    "website": "https://example.com",
+    "image": "traders.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Swazi Tech Solutions",
+    "address": "Hub Park, Manzini",
+    "phone": "+268 2505 4321",
+    "website": "https://example.com",
+    "image": "swazitech.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Peak Logistics Eswatini",
+    "address": "Ngwane Street, Manzini",
+    "phone": "+268 2505 8888",
+    "website": "https://example.com",
+    "image": "peaklogistics.png",
+    "membershipLevel": 2
+  }
+]
