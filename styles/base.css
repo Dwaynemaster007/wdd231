@@ -213,7 +213,7 @@ footer {
 
 #members-container.grid .member-card {
     background-color: #ffffff;
-    border: 1px solid var(--border-color);
+    border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -232,10 +232,35 @@ footer {
     align-items: center;
     padding: 0.75rem 1rem;
     background-color: #ffffff;
-    border: 1px solid var(--border-color);
+    border: 1px solid #dee2e6;
     border-radius: 4px;
 }
 
 #members-container.list .member-card img {
     display: none; /* Hide images in list mode */
+}
+
+/* View Toggle Buttons */
+.menu-views {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu-views button {
+    padding: 0.5rem 1.25rem;
+    font-weight: bold;
+    border: 1px solid #0056b3;
+    background-color: #ffffff;
+    color: #0056b3;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.menu-views button.active,
+.menu-views button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
 }
