@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manzini Chamber of Commerce | Home</title>
+    <meta name="description" content="Home page of the Manzini Chamber of Commerce, supporting local businesses in Manzini, Eswatini.">
+    <meta name="author" content="Thubelihle Dlamini">
+
+    <!-- Open Graph Social Meta Tags -->
+    <meta property="og:title" content="Manzini Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Supporting and promoting local businesses in Manzini, Eswatini through networking, events, and community resources.">
+    <meta property="og:image" content="https://dwaynemaster007.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://dwaynemaster007.github.io/wdd231/chamber/index.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link root CSS files using relative paths -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+
+    <link rel="icon" href="../favicon.ico">
+
+    <!-- Link root scripts for navbar and dates -->
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+
+    <!-- Home page specific JS -->
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.svg" alt="Chamber Logo" width="44" height="44">
+            <span>Manzini Chamber</span>
+        </div>
+        <button id="nav-button" class="hamburger" aria-label="Toggle Navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.webp" alt="Manzini city view" class="hero-image">
+            <div class="hero-text">
+                <h1>Manzini Chamber of Commerce</h1>
+                <p>Connecting local businesses. Building a stronger community.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <!-- Current Weather -->
+            <section class="card weather-card">
+                <h2>Current Weather in Manzini</h2>
+                <div id="weather-display">
+                    <!-- Populated by home.js -->
+                </div>
+            </section>
+
+            <!-- Business Spotlights -->
+            <section class="card spotlights-card">
+                <h2>Business Spotlights</h2>
+                <div id="spotlights-container" class="spotlights-grid">
+                    <!-- Populated by home.js -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="../images/github.svg" alt="GitHub Icon" width="24" height="24">
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="../images/linkedin.svg" alt="LinkedIn Icon" width="24" height="24">
+            </a>
+        </div>
+        <p>Manzini Chamber of Commerce | Info & Contact</p>
+        <p>Thubelihle Dlamini | WDD 231</p>
+        <p>&copy; <span id="currentyear"></span> Thubelihle Dlamini | Eswatini</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
