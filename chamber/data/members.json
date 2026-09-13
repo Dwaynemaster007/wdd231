@@ -1,56 +1,70 @@
 [
   {
     "name": "Eswatini Royal Insurance Corporation",
+    "tagline": "Protecting What Matters Most",
     "address": "Mbabane / Manzini, Eswatini",
     "phone": "+268 2505 2000",
+    "email": "info@sric.sz",
     "website": "https://www.sric.sz",
     "image": "sric.png",
     "membershipLevel": 3
   },
   {
     "name": "Living Waters Exploration",
+    "tagline": "Drilling Solutions You Can Trust",
     "address": "Manzini Industrial Site, Eswatini",
     "phone": "+268 2505 1234",
+    "email": "info@livingwaters.co.sz",
     "website": "https://example.com",
     "image": "livingwaters.png",
     "membershipLevel": 2
   },
   {
     "name": "FNB Eswatini",
+    "tagline": "How Can We Help You?",
     "address": "Manzini Branch, Eswatini",
     "phone": "+268 2508 1000",
+    "email": "info@fnb.co.sz",
     "website": "https://www.fnb.co.sz",
     "image": "fnb.png",
     "membershipLevel": 3
   },
   {
     "name": "Macmillan Education Eswatini",
+    "tagline": "Learning Without Limits",
     "address": "Matsapha, Eswatini",
     "phone": "+268 2518 4567",
+    "email": "info@macmillan-eswatini.com",
     "website": "https://example.com",
     "image": "macmillan.png",
     "membershipLevel": 1
   },
   {
     "name": "Manzini Traders Co.",
+    "tagline": "Your Local Market Partner",
     "address": "Central Market, Manzini",
     "phone": "+268 2505 9999",
+    "email": "info@manzinitraders.co.sz",
     "website": "https://example.com",
     "image": "traders.png",
     "membershipLevel": 1
   },
   {
     "name": "Swazi Tech Solutions",
+    "tagline": "Technology That Works For You",
     "address": "Hub Park, Manzini",
     "phone": "+268 2505 4321",
+    "email": "info@swazitech.co.sz",
     "website": "https://example.com",
     "image": "swazitech.png",
     "membershipLevel": 2
   },
   {
     "name": "Peak Logistics Eswatini",
+    "tagline": "Delivering Beyond Borders",
     "address": "Ngwane Street, Manzini",
     "phone": "+268 2505 8888",
+    "email": "info@peaklogistics.co.sz",
     "website": "https://example.com",
     "image": "peaklogistics.png",
     "membershipLevel": 2

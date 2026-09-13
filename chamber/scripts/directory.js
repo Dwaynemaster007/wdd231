@@ -19,11 +19,18 @@ const displayMembers = (members) => {
         let card = document.createElement('section');
         card.classList.add('member-card');
         card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank" rel="noopener">Website</a>
+            <div class="member-header">
+                <h3>${member.name}</h3>
+                <p class="tagline">${member.tagline}</p>
+            </div>
+            <div class="member-body">
+                <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">
+                <div class="member-info">
+                    <p><strong>EMAIL:</strong> ${member.email}</p>
+                    <p><strong>PHONE:</strong> ${member.phone}</p>
+                    <p><strong>URL:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+                </div>
+            </div>
         `;
         membersContainer.appendChild(card);
     });

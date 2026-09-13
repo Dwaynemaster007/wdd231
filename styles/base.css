@@ -191,6 +191,57 @@ footer {
     height: 24px;
 }
 
+/* Member Card: shared structure for both Grid and List views */
+.member-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.member-header {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.member-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.member-header .tagline {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #e6eefc;
+}
+
+.member-body {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.member-body img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.member-info {
+    flex: 1 1 150px;
+}
+
+.member-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
 /* Grid View */
 #members-container.grid {
     display: grid;
@@ -198,58 +249,15 @@ footer {
     gap: 1.25rem;
 }
 
-#members-container.grid .member-card {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-align: center;
-}
-
-#members-container.grid .member-card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 0.75rem;
-}
-
 /* List View */
 #members-container.list {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-}
-
-#members-container.list .member-card {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
 }
 
-#members-container.list .member-card img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-#members-container.list .member-card h3 {
-    flex: 1 1 180px;
-    margin: 0;
-}
-
-#members-container.list .member-card p {
-    flex: 1 1 140px;
-    margin: 0;
-}
-
-#members-container.list .member-card a {
-    flex: 0 0 auto;
+#members-container.list .member-body {
+    align-items: center;
 }
 
 /* View Toggle Buttons */
@@ -351,4 +359,22 @@ footer {
 .member-level {
     font-weight: bold;
     color: #0056b3;
+}
+
+/* Chamber Footer Layout (directory.html, chamber/index.html) */
+.chamber-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-contact,
+.footer-dev {
+    text-align: center;
+}
+
+.footer-contact p,
+.footer-dev p {
+    margin: 0.25rem 0;
 }
