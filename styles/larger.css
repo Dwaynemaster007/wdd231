@@ -23,7 +23,7 @@
         grid-template-columns: 2fr 1fr;
     }
 
-    .certificate-card {
+    .certificate-courses {
         grid-column: 1 / -1;
     }
 

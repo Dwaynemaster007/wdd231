@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <!-- CSS Stylesheets (normalize.css MUST come first) -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -41,57 +41,57 @@
         <nav id="nav-bar" class="navigation">
             <ul>
                 <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="chamber/index.html">Chamber</a></li>
-                <li><a href="siteplan.html">Site Plan</a></li>
+                <li><a href="chamber/index.html">Chamber Project</a></li>
+                <li><a href="final/index.html">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>WDD 231: Web Frontend Development I</h1>
+        <h1>Home</h1>
 
         <div class="grid-container">
-            <!-- Course Work Section -->
-            <section class="card">
-                <h2>Course Work</h2>
-                <div class="filter-buttons">
-                    <button id="btn-all" class="active">All</button>
-                    <button id="btn-wdd">WDD</button>
-                    <button id="btn-cse">CSE</button>
-                </div>
-                <div id="course-container" class="course-list">
-                    <!-- Dynamic course cards render here -->
-                </div>
-                <div class="credits-summary">
-                    <p>Total Credits Required: <span id="total-credits">0</span></p>
-                </div>
+            <!-- About Me -->
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <p>Welcome to my WDD 231 course home page. I am Thubelihle Dlamini, based in Eswatini, and I am passionate about web frontend development and building responsive, accessible web applications. Alongside this course, I am pursuing several other credentials in data science, financial engineering, and software development.</p>
             </section>
 
-            <!-- Location & Profile Details -->
-            <section class="card">
-                <h2>Eswatini</h2>
+            <!-- Student Photo -->
+            <section class="card student-photo">
+                <h2>Student Photo</h2>
                 <figure>
                     <img src="images/profile.webp" alt="Thubelihle Dlamini Profile Photo" width="250" height="250" loading="lazy">
                     <figcaption>Thubelihle Dlamini</figcaption>
                 </figure>
-                <p>Welcome to my WDD 231 course home page. I am passionate about web frontend development and building responsive, accessible web applications.</p>
             </section>
 
-            <!-- Certificate Details -->
-            <section class="card certificate-card">
-                <h2>Web and Computer Programming Certificate</h2>
-                <p>The Web and Computer Programming certificate equips students with core competencies in HTML, CSS, JavaScript, and backend application structure.</p>
+            <!-- Web Certificate Courses -->
+            <section class="card certificate-courses">
+                <h2>Web Certificate Courses</h2>
+                <div class="filter-buttons">
+                    <button id="btn-all" class="active">All</button>
+                    <button id="btn-cse">CSE</button>
+                    <button id="btn-wdd">WDD</button>
+                </div>
+                <div id="course-container" class="course-list">
+                    <!-- Dynamic course cards render here -->
+                </div>
+                <p class="credits-summary">The total credits for course listed above is <span id="total-credits">0</span></p>
             </section>
         </div>
     </main>
 
     <footer>
         <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                <img src="images/linkedin.svg" alt="LinkedIn Icon" width="24" height="24">
+            </a>
             <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Profile">
                 <img src="images/github.svg" alt="GitHub Icon" width="24" height="24">
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-                <img src="images/linkedin.svg" alt="LinkedIn Icon" width="24" height="24">
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X Profile">
+                <img src="images/x.svg" alt="X Icon" width="24" height="24">
             </a>
         </div>
         <p>&copy; <span id="currentyear"></span> Thubelihle Dlamini | Eswatini</p>
