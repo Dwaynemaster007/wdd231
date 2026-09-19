@@ -29,10 +29,22 @@ function displayCurrentWeather(data) {
     const weatherDisplay = document.querySelector('#weather-display');
     const temperature = Math.round(data.main.temp);
     const description = data.weather[0].description;
+    const feelsLike = Math.round(data.main.feels_like);
+    const humidity = data.main.humidity;
+    const windSpeed = Math.round(data.wind.speed);
+    const tempHigh = Math.round(data.main.temp_max);
+    const tempLow = Math.round(data.main.temp_min);
 
     weatherDisplay.innerHTML = `
         <p class="weather-temp">${temperature}&deg;C</p>
         <p class="weather-description">${description}</p>
+        <div class="weather-details">
+            <p><strong>High:</strong> ${tempHigh}&deg;C</p>
+            <p><strong>Low:</strong> ${tempLow}&deg;C</p>
+            <p><strong>Feels like:</strong> ${feelsLike}&deg;C</p>
+            <p><strong>Humidity:</strong> ${humidity}%</p>
+            <p><strong>Wind:</strong> ${windSpeed} m/s</p>
+        </div>
     `;
 }
 
