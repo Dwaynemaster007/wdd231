@@ -289,27 +289,42 @@ footer {
 .hero {
     position: relative;
     margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .hero-image {
+    display: block;
     width: 100%;
     height: 260px;
     object-fit: cover;
-    border-radius: 8px;
 }
 
-.hero-text {
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
 }
 
-.hero-text h1 {
+.hero-overlay h1 {
+    color: #ffffff;
     border-bottom: none;
+    margin: 0 0 0.5rem 0;
+}
+
+.hero-overlay p {
+    margin: 0 0 1rem 0;
 }
 
 .cta-button {
     display: inline-block;
-    margin-top: 0.5rem;
     padding: 0.75rem 1.5rem;
     background-color: #0056b3;
     color: #ffffff;
@@ -336,6 +351,35 @@ footer {
     margin: 0;
 }
 
+.weather-description {
+    text-transform: capitalize;
+    margin: 0.25rem 0 0 0;
+}
+
+.forecast-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.forecast-day {
+    flex: 1;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.forecast-day-label {
+    font-weight: bold;
+    margin: 0;
+}
+
+.forecast-temp {
+    margin: 0.25rem 0 0 0;
+}
+
 .spotlights-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -351,14 +395,39 @@ footer {
 }
 
 .spotlight-item img {
-    max-width: 80px;
-    height: auto;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     margin-bottom: 0.5rem;
 }
 
 .member-level {
     font-weight: bold;
     color: #0056b3;
+}
+
+/* Chamber Home Page: Current Events */
+.events-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.event-item {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0056b3;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.event-item h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #0056b3;
+    margin: 0 0 0.5rem 0;
 }
 
 /* Chamber Footer Layout (directory.html, chamber/index.html) */

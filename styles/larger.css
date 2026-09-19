@@ -55,4 +55,8 @@
     .social-links {
         flex: 0 0 auto;
     }
+
+    .events-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
