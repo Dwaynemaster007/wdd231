@@ -260,6 +260,14 @@ footer {
     align-items: center;
 }
 
+#members-container.list .member-body img {
+    display: none;
+}
+
+#members-container.list .member-info {
+    flex: 1 1 100%;
+}
+
 /* View Toggle Buttons */
 .menu-views {
     display: flex;
