@@ -28,7 +28,7 @@ header {
 
 /* Hamburger Icon */
 .hamburger {
-    background: transparent;
+    background: #00000000;
     border: none;
     font-size: 1.75rem;
     cursor: pointer;
@@ -309,7 +309,7 @@ footer {
     justify-content: center;
     text-align: center;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: #00000073;
     color: #ffffff;
 }
 
