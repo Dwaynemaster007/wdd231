@@ -13,15 +13,23 @@ async function getMembers() {
     }
 }
 
+const membershipLabels = {
+    1: 'Member',
+    2: 'Silver Member',
+    3: 'Gold Member',
+};
+
 const displayMembers = (members) => {
     membersContainer.innerHTML = '';
     members.forEach((member) => {
         let card = document.createElement('section');
         card.classList.add('member-card');
+        const levelLabel = membershipLabels[member.membershipLevel] || 'Member';
         card.innerHTML = `
             <div class="member-header">
                 <h3>${member.name}</h3>
                 <p class="tagline">${member.tagline}</p>
+                <span class="member-badge level-${member.membershipLevel}">${levelLabel}</span>
             </div>
             <div class="member-body">
                 <img src="images/${member.image}" alt="${member.name} Logo" loading="lazy" width="100" height="100">

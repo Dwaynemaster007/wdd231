@@ -218,6 +218,32 @@ footer {
     color: #e6eefc;
 }
 
+.member-badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.member-badge.level-3 {
+    background-color: #f4d35e;
+    color: #5c4400;
+}
+
+.member-badge.level-2 {
+    background-color: #d9dee3;
+    color: #3a3f44;
+}
+
+.member-badge.level-1 {
+    background-color: #ffffff;
+    color: #0056b3;
+}
+
 .member-body {
     display: flex;
     align-items: flex-start;
@@ -256,8 +282,34 @@ footer {
     gap: 0.75rem;
 }
 
+#members-container.list .member-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
+#members-container.list .member-header .tagline {
+    margin: 0;
+}
+
+#members-container.list .member-header .tagline::before {
+    content: "\2014 ";
+}
+
+#members-container.list .member-badge {
+    margin-top: 0;
+    order: 3;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: -0.1rem;
+}
+
 #members-container.list .member-body {
     align-items: center;
+    padding: 0.75rem 1rem;
 }
 
 #members-container.list .member-body img {
@@ -266,6 +318,15 @@ footer {
 
 #members-container.list .member-info {
     flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 2rem;
+}
+
+#members-container.list .member-info p {
+    margin: 0;
+    white-space: nowrap;
 }
 
 /* View Toggle Buttons */
