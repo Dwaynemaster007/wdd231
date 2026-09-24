@@ -66,6 +66,7 @@ const totalCreditsSpan = document.querySelector('#total-credits');
 const btnAll = document.querySelector('#btn-all');
 const btnWdd = document.querySelector('#btn-wdd');
 const btnCse = document.querySelector('#btn-cse');
+const courseDetails = document.querySelector('#course-details');
 
 function renderCourses(filteredCourses) {
     courseContainer.innerHTML = '';
@@ -79,12 +80,37 @@ function renderCourses(filteredCourses) {
         const statusIcon = course.completed ? ' ✓' : '';
         card.innerHTML = `<p>${course.subject} ${course.number}${statusIcon}</p>`;
 
+        // Add event listener to open modal when this card is clicked
+        card.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         courseContainer.appendChild(card);
     });
 
     // Calculate total credits using reduce
     const totalCredits = filteredCourses.reduce((acc, course) => acc + course.credits, 0);
     totalCreditsSpan.textContent = totalCredits;
+}
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    
+    courseDetails.showModal();
+
+    const closeModal = document.querySelector('#closeModal');
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    });
 }
 
 // Button event listeners
