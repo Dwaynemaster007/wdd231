@@ -300,7 +300,6 @@ footer {
 }
 
 #members-container.list .member-badge {
-    margin-top: 0;
     order: 3;
     flex-basis: 100%;
     text-align: center;
@@ -571,8 +570,8 @@ dialog button {
   margin: 2rem auto;
   width: 50px;
   height: 50px;
-  border: 5px solid transparent;
-  border-color: #999 transparent #999 transparent;
+  border: 5px solid #00000000;
+  border-color: #999 #00000000 #999 #00000000;
   border-radius: 50%;
   animation: spin 1.5s linear infinite;
   box-shadow: 0 0 1rem #0000ff66;
@@ -713,6 +712,22 @@ dialog button {
     text-align: center;
     opacity: 0;
     animation: cardFadeInUp 0.6s ease forwards;
+}
+
+.card-delay-1 {
+    animation-delay: 0s;
+}
+
+.card-delay-2 {
+    animation-delay: 0.15s;
+}
+
+.card-delay-3 {
+    animation-delay: 0.3s;
+}
+
+.card-delay-4 {
+    animation-delay: 0.45s;
 }
 
 .membership-card h3 {
