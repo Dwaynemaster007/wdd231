@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manzini Chamber of Commerce | Join</title>
+    <meta name="description" content="Apply for membership with the Manzini Chamber of Commerce.">
+    <meta name="author" content="Thubelihle Dlamini">
+
+    <!-- Open Graph Social Meta Tags -->
+    <meta property="og:title" content="Manzini Chamber of Commerce | Membership Application">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Apply for membership with the Manzini Chamber of Commerce.">
+    <meta property="og:image" content="https://dwaynemaster007.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://dwaynemaster007.github.io/wdd231/chamber/join.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link root CSS files using relative paths -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+
+    <link rel="icon" href="../favicon.ico">
+
+    <!-- Link root scripts for navbar and dates -->
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+
+    <!-- Join page specific JS -->
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.svg" alt="Chamber Logo" width="44" height="44">
+            <span>Manzini Chamber</span>
+        </div>
+        <button id="nav-button" class="hamburger" aria-label="Toggle Navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join</h1>
+
+        <div class="join-layout">
+            <!-- Membership Application Form -->
+            <section class="card join-form-card">
+                <h2>Membership Application Form</h2>
+
+                <form action="thankyou.html" method="get">
+                    <label for="firstName">First Name
+                        <input type="text" id="firstName" name="firstName" required
+                               title="Your first name" autocomplete="given-name">
+                    </label>
+
+                    <label for="lastName">Last Name
+                        <input type="text" id="lastName" name="lastName" required
+                               title="Your last name" autocomplete="family-name">
+                    </label>
+
+                    <label for="orgTitle">Organizational Title
+                        <input type="text" id="orgTitle" name="orgTitle"
+                               title="Your title within your organization (letters, hyphens, and spaces only, minimum 7 characters)"
+                               autocomplete="organization-title"
+                               pattern="[A-Za-z\-\s]{7,}">
+                    </label>
+
+                    <label for="email">Email Address
+                        <input type="email" id="email" name="email" required
+                               title="Your email address" autocomplete="email"
+                               placeholder="john89@gmail.com">
+                    </label>
+
+                    <label for="phone">Mobile Phone Number
+                        <input type="tel" id="phone" name="phone" required
+                               title="Your mobile phone number" autocomplete="tel"
+                               placeholder="987-555-1234">
+                    </label>
+
+                    <label for="orgName">Business/Organization Name
+                        <input type="text" id="orgName" name="orgName" required
+                               title="Your business or organization's name" autocomplete="organization">
+                    </label>
+
+                    <fieldset>
+                        <legend>Membership Level</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="membershipLevel" value="np" checked>
+                            NP Membership (Non-Profit &mdash; Free)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="membershipLevel" value="bronze">
+                            Bronze Membership
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="membershipLevel" value="silver">
+                            Silver Membership
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="membershipLevel" value="gold">
+                            Gold Membership
+                        </label>
+                    </fieldset>
+
+                    <label for="orgDescription">Business/Organization Description
+                        <textarea id="orgDescription" name="orgDescription" rows="4"
+                                  title="A short description of your business or organization"></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Apply for Membership">
+                </form>
+            </section>
+
+            <!-- Membership Level Cards -->
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+
+                <div class="membership-card" style="animation-delay: 0s;">
+                    <h3>NP Membership Level</h3>
+                    <button type="button" class="learn-more-btn" data-modal="modal-np">Learn More</button>
+                </div>
+
+                <div class="membership-card" style="animation-delay: 0.15s;">
+                    <h3>Bronze Membership Level</h3>
+                    <button type="button" class="learn-more-btn" data-modal="modal-bronze">Learn More</button>
+                </div>
+
+                <div class="membership-card" style="animation-delay: 0.3s;">
+                    <h3>Silver Membership Level</h3>
+                    <button type="button" class="learn-more-btn" data-modal="modal-silver">Learn More</button>
+                </div>
+
+                <div class="membership-card" style="animation-delay: 0.45s;">
+                    <h3>Gold Membership Level</h3>
+                    <button type="button" class="learn-more-btn" data-modal="modal-gold">Learn More</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Membership Benefit Modals -->
+        <dialog id="modal-np">
+            <button type="button" class="close-modal" aria-label="Close">X</button>
+            <h2>NP Membership</h2>
+            <p>Benefits include:</p>
+            <ul>
+                <li>Directory listing on the chamber website</li>
+                <li>Invitation to chamber networking events</li>
+                <li>Access to community resource workshops</li>
+            </ul>
+            <p><strong>COST:</strong> Free</p>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <button type="button" class="close-modal" aria-label="Close">X</button>
+            <h2>Bronze Membership</h2>
+            <p>Benefits include:</p>
+            <ul>
+                <li>Everything in NP Membership</li>
+                <li>Priority directory listing placement</li>
+                <li>One free event ticket per quarter</li>
+            </ul>
+            <p><strong>COST:</strong> E250 annual</p>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <button type="button" class="close-modal" aria-label="Close">X</button>
+            <h2>Silver Membership</h2>
+            <p>Benefits include:</p>
+            <ul>
+                <li>Everything in Bronze Membership</li>
+                <li>Access to member-only training sessions</li>
+                <li>Discounted advertising in the chamber newsletter</li>
+            </ul>
+            <p><strong>COST:</strong> E600 annual</p>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <button type="button" class="close-modal" aria-label="Close">X</button>
+            <h2>Gold Membership</h2>
+            <p>Benefits include:</p>
+            <ul>
+                <li>Everything in Silver Membership</li>
+                <li>Home page business spotlight placement</li>
+                <li>Free luncheon tickets to all chamber events</li>
+                <li>Featured social media promotion</li>
+            </ul>
+            <p><strong>COST:</strong> E1200 annual</p>
+        </dialog>
+    </main>
+
+    <footer class="chamber-footer">
+        <div class="footer-contact">
+            <p><strong>Manzini Chamber of Commerce</strong></p>
+            <p>Manzini, Eswatini</p>
+            <p>info@manzinichamber.org</p>
+            <p>+268 2505 0000</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="../images/linkedin.svg" alt="LinkedIn Icon" width="24" height="24">
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="../images/github.svg" alt="GitHub Icon" width="24" height="24">
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+                <img src="../images/twitter.svg" alt="X Icon (Formerly Twitter)" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="footer-dev">
+            <p>WDD 231 Class Project</p>
+            <p>Thubelihle Dlamini</p>
+            <p>&copy; <span id="currentyear"></span> Manzini Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

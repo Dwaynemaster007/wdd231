@@ -529,7 +529,7 @@ footer {
 }
 
 dialog {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #0000001a;
   border-radius: 0.25rem;
   padding: 1rem;
   background-color: #fff;
@@ -539,7 +539,7 @@ dialog {
 }
 
 ::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
 }
 
 dialog button {
@@ -547,7 +547,7 @@ dialog button {
   top: 23px;
   right: 23px;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #0000001a;
 }
 
 /* Spin animation for loading indicator */
@@ -575,7 +575,7 @@ dialog button {
   border-color: #999 transparent #999 transparent;
   border-radius: 50%;
   animation: spin 1.5s linear infinite;
-  box-shadow: 0 0 1rem rgba(0, 0, 255, 0.4);
+  box-shadow: 0 0 1rem #0000ff66;
   position: relative;
 }
 
@@ -604,4 +604,161 @@ dialog button {
 
 .loader-t:hover::after {
   transform: translate(-50%, -50%) scale(1.5);
+}
+/* Join Page: Layout */
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.join-form-card h2,
+.membership-cards h2 {
+    margin-top: 0;
+}
+
+/* Join Page: Form Styling */
+.join-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.join-form-card label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.join-form-card input[type="text"],
+.join-form-card input[type="email"],
+.join-form-card input[type="tel"],
+.join-form-card textarea {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.join-form-card input:invalid:not(:placeholder-shown) {
+    border-color: #c0392b;
+}
+
+.join-form-card textarea {
+    resize: vertical;
+}
+
+.join-form-card fieldset {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+
+.join-form-card legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.join-form-card .radio-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    margin: 0.4rem 0;
+}
+
+.join-form-card input[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.join-form-card input[type="submit"]:hover {
+    background-color: #003d80;
+}
+
+/* Join Page: Membership Cards */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@keyframes cardFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    background-color: #0056b3;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+    opacity: 0;
+    animation: cardFadeInUp 0.6s ease forwards;
+}
+
+.membership-card h3 {
+    margin: 0 0 0.75rem 0;
+}
+
+.learn-more-btn {
+    padding: 0.5rem 1.25rem;
+    background-color: #ffffff;
+    color: #0056b3;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.learn-more-btn:hover {
+    background-color: #dee2e6;
+}
+
+/* Join Page: Modal Content */
+dialog h2 {
+    color: #0056b3;
+    text-align: left;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+dialog ul {
+    padding-left: 1.25rem;
+}
+
+/* Thank You Page */
+.thankyou-details {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.thankyou-details dt {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.thankyou-details dd {
+    margin: 0;
 }

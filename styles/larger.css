@@ -55,4 +55,17 @@
     .social-links {
         flex: 0 0 auto;
     }
+
+    .join-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .join-form-card {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
 }
