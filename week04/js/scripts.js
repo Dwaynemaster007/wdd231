@@ -7,9 +7,9 @@ if (formData) {
   const showInfo = new URLSearchParams(window.location.search);
 
   // Retrieve specific form field values using .get('name')
-  const fname = showInfo.get('fname');
+  const first = showInfo.get('first');
   const email = showInfo.get('email');
 
   // Display values on page
-  document.querySelector('#results').textContent = `Thank you, ${fname}! We sent a confirmation to ${email}.`;
+  document.querySelector('#results').textContent = `Thank you, ${first}! We sent a confirmation to ${email}.`;
 }
