@@ -96,10 +96,16 @@ h1 {
     gap: 1.5rem;
 }
 
-.card {
+/* Shared card-box appearance for .card, .member-card, .spotlight-item */
+.card,
+.member-card,
+.spotlight-item {
     background-color: #ffffff;
     border: 1px solid #dee2e6;
     border-radius: 8px;
+}
+
+.card {
     padding: 1.25rem;
     box-shadow: 0 2px 4px #0000000d;
 }
@@ -122,8 +128,9 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.filter-buttons button {
-    padding: 0.5rem 1rem;
+.filter-buttons button,
+.menu-views button {
+    padding: 0.5rem 1.25rem;
     border: 1px solid #0056b3;
     background-color: #ffffff;
     color: #0056b3;
@@ -134,7 +141,9 @@ h1 {
 }
 
 .filter-buttons button.active,
-.filter-buttons button:hover {
+.filter-buttons button:hover,
+.menu-views button.active,
+.menu-views button:hover {
     background-color: #0056b3;
     color: #ffffff;
 }
@@ -193,9 +202,6 @@ footer {
 
 /* Member Card: shared structure for both Grid and List views */
 .member-card {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -328,29 +334,12 @@ footer {
     white-space: nowrap;
 }
 
-/* View Toggle Buttons */
+/* View Toggle Buttons (button layout merged with .filter-buttons above) */
 .menu-views {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-}
-
-.menu-views button {
-    padding: 0.5rem 1.25rem;
-    font-weight: bold;
-    border: 1px solid #0056b3;
-    background-color: #ffffff;
-    color: #0056b3;
-    border-radius: 4px;
-    cursor: pointer;
-    min-height: 44px;
-}
-
-.menu-views button.active,
-.menu-views button:hover {
-    background-color: #0056b3;
-    color: #ffffff;
 }
 
 /* Chamber Home Page: Hero Section */
@@ -401,7 +390,8 @@ footer {
     border-radius: 4px;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.join-form-card input[type="submit"]:hover {
     background-color: #003d80;
 }
 
@@ -412,10 +402,17 @@ footer {
     gap: 1.5rem;
 }
 
-.weather-temp {
-    font-size: 2rem;
+/* Shared "bold blue label" style used across weather, member level, event date, and thank-you fields */
+.weather-temp,
+.member-level,
+.event-date,
+.thankyou-details dt {
     font-weight: bold;
     color: #0056b3;
+}
+
+.weather-temp {
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -466,9 +463,6 @@ footer {
 }
 
 .spotlight-item {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
     padding: 1rem;
     text-align: center;
 }
@@ -478,11 +472,6 @@ footer {
     height: 80px;
     object-fit: contain;
     margin-bottom: 0.5rem;
-}
-
-.member-level {
-    font-weight: bold;
-    color: #0056b3;
 }
 
 /* Chamber Home Page: Current Events */
@@ -504,8 +493,6 @@ footer {
 }
 
 .event-date {
-    font-weight: bold;
-    color: #0056b3;
     margin: 0 0 0.5rem 0;
 }
 
@@ -549,61 +536,6 @@ dialog button {
   border: 1px solid #0000001a;
 }
 
-/* Spin animation for loading indicator */
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Pulse animation for gear emoji */
-@keyframes pulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.25);
-  }
-}
-
-#loader {
-  margin: 2rem auto;
-  width: 50px;
-  height: 50px;
-  border: 5px solid #00000000;
-  border-color: #999 #00000000 #999 #00000000;
-  border-radius: 50%;
-  animation: spin 1.5s linear infinite;
-  box-shadow: 0 0 1rem #0000ff66;
-  position: relative;
-}
-
-#loader::after {
-  content: '⚙️';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-.loader-t {
-  transition: transform 1.5s linear;
-}
-
-.loader-t::after {
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 1.5s ease-in-out;
-  font-size: 2rem;
-}
-
-.loader-t:hover {
-  transform: rotate(360deg);
-}
-
-.loader-t:hover::after {
-  transform: translate(-50%, -50%) scale(1.5);
-}
 /* Join Page: Layout */
 .join-layout {
     display: flex;
@@ -680,10 +612,6 @@ dialog button {
     font-size: 1rem;
     cursor: pointer;
     min-height: 44px;
-}
-
-.join-form-card input[type="submit"]:hover {
-    background-color: #003d80;
 }
 
 /* Join Page: Membership Cards */
@@ -767,11 +695,6 @@ dialog ul {
     grid-template-columns: max-content 1fr;
     gap: 0.5rem 1rem;
     margin-top: 1rem;
-}
-
-.thankyou-details dt {
-    font-weight: bold;
-    color: #0056b3;
 }
 
 .thankyou-details dd {
