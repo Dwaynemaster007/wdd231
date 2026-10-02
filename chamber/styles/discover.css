@@ -1,0 +1,150 @@
+/* ----------------------------------------------------------------------
+   Visit message
+---------------------------------------------------------------------- */
+.visit-message {
+    background-color: #e6eefc;
+    border-left: 4px solid #0056b3;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0 1.5rem 0;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* ----------------------------------------------------------------------
+   Discover Card Grid: Small screens (320px - 640px)
+   Single column, stacked in order using named grid areas.
+---------------------------------------------------------------------- */
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+        "a6"
+        "a7"
+        "a8";
+}
+
+.card-1 { grid-area: a1; }
+.card-2 { grid-area: a2; }
+.card-3 { grid-area: a3; }
+.card-4 { grid-area: a4; }
+.card-5 { grid-area: a5; }
+.card-6 { grid-area: a6; }
+.card-7 { grid-area: a7; }
+.card-8 { grid-area: a8; }
+
+.discover-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card h2 {
+    margin: 0 0 0.5rem 0;
+    color: #0056b3;
+    font-size: 1.1rem;
+}
+
+.discover-card figure {
+    margin: 0 0 0.5rem 0;
+}
+
+.discover-card figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.discover-card .learn-more {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.discover-card .learn-more:hover {
+    background-color: #003d80;
+}
+
+.discover-card.expanded p {
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------------------------
+   Medium screens (641px - 1024px)
+   Two columns, with named areas arranged in pairs.
+---------------------------------------------------------------------- */
+@media (min-width: 641px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "a1 a2"
+            "a3 a4"
+            "a5 a6"
+            "a7 a8";
+    }
+
+    /* Hover effect on card images - medium screens and up only */
+    .discover-card figure img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-card figure img:hover {
+        transform: scale(1.04);
+        filter: brightness(1.08) saturate(1.2);
+    }
+}
+
+/* ----------------------------------------------------------------------
+   Large screens (1025px and up)
+   A mosaic layout: a featured 2x2 item, surrounding single cells, and a
+   wide item spanning two columns at the bottom. This is a genuinely
+   different arrangement, not simply "more columns."
+---------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "a1 a1 a2 a3"
+            "a1 a1 a4 a5"
+            "a6 a7 a8 a8";
+    }
+
+    .discover-card {
+        height: 100%;
+    }
+
+    .card-1 figure img,
+    .card-8 figure img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
