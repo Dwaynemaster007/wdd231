@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPulse &mdash; Individual Project Site Plan</title>
+    <meta name="description" content="Website site plan for CryptoPulse, a cryptocurrency market tracking site built for WDD 231.">
+    <meta name="author" content="Thubelihle Dlamini">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+        <h1>CryptoPulse</h1>
+        <p class="subtitle">Individual Website Project &mdash; Site Plan</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>CryptoPulse</strong></p>
+            <p>The name combines "crypto" with "pulse" &mdash; the idea of checking the market's live heartbeat at a glance. It's short, easy to remember, and immediately signals what the site is about to a first-time visitor.</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>CryptoPulse helps casual investors follow the cryptocurrency market without needing a trading-platform account. The site will:</p>
+            <ul>
+                <li>Display live price, 24-hour change, market cap, and volume for at least 15 cryptocurrencies, pulled from a public market-data API.</li>
+                <li>Let visitors save coins to a personal watchlist that persists between visits using localStorage.</li>
+                <li>Explain, in plain language, how to read market data responsibly (what market cap and volume actually mean, and why price alone can be misleading).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>"What is the current price and 24-hour change for Bitcoin and Ethereum right now?"</li>
+                <li>"How do I save a coin to my watchlist so I don't have to search for it again next time?"</li>
+                <li>"What does 'market cap' actually mean, and why does it matter more than price alone?"</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>The palette is built around a dark fintech-style navy background with a crypto-standard green/red pair for signaling price movement, plus a light neutral for body text areas.</p>
+            <ul class="color-list">
+                <li><span class="swatch swatch-navy"></span><strong>Deep Navy #0B1F3A</strong> &mdash; header, footer, and section background</li>
+                <li><span class="swatch swatch-teal"></span><strong>Market Green #16C784</strong> &mdash; headings, links, positive price changes, buttons</li>
+                <li><span class="swatch swatch-red"></span><strong>Market Red #EA3943</strong> &mdash; negative price changes, alerts</li>
+                <li><span class="swatch swatch-offwhite"></span><strong>Off-White #F5F7FA</strong> &mdash; page background and card surfaces</li>
+                <li><span class="swatch swatch-dark"></span><strong>Charcoal Text #1E2329</strong> &mdash; body text on light surfaces</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>Two Google Fonts are used, each with a distinct role so headings stay easy to scan and body copy stays easy to read at length:</p>
+            <ul>
+                <li><strong>Space Grotesk</strong> (weights 500/700) &mdash; used for the site name, all headings, and button labels. Its geometric, slightly technical feel matches a data/finance product.</li>
+                <li><strong>Inter</strong> (weights 400/600) &mdash; used for body paragraphs, list text, and form labels. It stays highly legible at small sizes, which matters for dense tables of market data.</li>
+            </ul>
+            <p class="font-sample">This paragraph is set in Inter, the body font, while the heading above it is set in Space Grotesk, the display font &mdash; both are applied live on this page, not just described.</p>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>Black-and-white structural sketches of the CryptoPulse home page, showing the header/nav, hero area with a watchlist call-to-action, and the dynamically generated grid of coin cards.</p>
+
+            <div class="wireframes">
+                <figure>
+                    <img src="images/wireframe-mobile.svg" alt="Mobile wireframe sketch of the CryptoPulse home page, showing a stacked header, hero, four coin list cards, a watchlist button, and footer" width="320" height="640" loading="lazy">
+                    <figcaption>Mobile view (320px)</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/wireframe-desktop.svg" alt="Desktop wireframe sketch of the CryptoPulse home page, showing a horizontal nav, hero with a watchlist button, and an 8-card coin grid in two rows of four" width="960" height="540" loading="lazy">
+                    <figcaption>Desktop / wide view</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Thubelihle Dlamini &bull; WDD 231 Individual Project Site Plan</p>
+    </footer>
+</body>
+</html>
