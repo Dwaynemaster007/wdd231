@@ -13,7 +13,7 @@
   Named grid areas — three distinct layouts (not just more columns).
   Small  : single column stack
   Medium : mixed spans + reordered areas (featured full-width rows)
-  Large  : mosaic with 2x2 feature and wide bottom cell
+  Large  : mosaic with wide feature row + bottom wide cell
 */
 .discover-grid {
     display: grid;
@@ -47,6 +47,8 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 1px 3px #00000014;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .discover-card h2 {
@@ -62,6 +64,8 @@
 .discover-card figure img {
     width: 100%;
     height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
     border-radius: 4px;
     display: block;
 }
@@ -76,11 +80,12 @@
 .discover-card p {
     flex-grow: 1;
     font-size: 0.9rem;
+    margin: 0 0 0.5rem;
 }
 
 .discover-card .learn-more {
     align-self: flex-start;
-    margin-top: 0.5rem;
+    margin-top: auto;
     padding: 0.5rem 1rem;
     background-color: #0056b3;
     color: #ffffff;
@@ -121,23 +126,16 @@
     }
 }
 
-/* Large: 1025px+ — mosaic layout */
+/*
+  Large: 1025px+ — mosaic with horizontal spans only.
+  Avoids 2-row spanning (which caused buttons to overflow onto cards below).
+*/
 @media (min-width: 1025px) {
     .discover-grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
             "a1 a1 a2 a3"
-            "a1 a1 a4 a5"
-            "a6 a7 a8 a8";
-    }
-
-    .discover-card {
-        height: 100%;
-    }
-
-    .card-1 figure img,
-    .card-8 figure img {
-        height: 100%;
-        object-fit: cover;
+            "a4 a5 a6 a6"
+            "a7 a8 a8 a8";
     }
 }
