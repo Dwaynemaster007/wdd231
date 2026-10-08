@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Market Metrics | CryptoPulse</title>
+    <meta name="description" content="Plain-language explanations of market cap, volume, and 24-hour change — plus contact CryptoPulse.">
+    <meta name="author" content="Thubelihle Dlamini">
+
+    <meta property="og:title" content="Learn Market Metrics | CryptoPulse">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Understand market cap, volume, and price change before you follow the crypto markets.">
+    <meta property="og:url" content="https://dwaynemaster007.github.io/wdd231/finalproject/learn.html">
+    <meta property="og:image" content="https://dwaynemaster007.github.io/wdd231/finalproject/images/og-cover.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/learn.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-mark" aria-hidden="true">CP</span>
+            <span class="site-name">CryptoPulse</span>
+        </div>
+        <button id="nav-button" class="hamburger" aria-label="Toggle Navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Market</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li class="current"><a href="learn.html">Learn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Read the market responsibly</h1>
+                <p>Price alone can mislead. These plain-language definitions help you use CryptoPulse data with context.</p>
+            </div>
+        </section>
+
+        <div class="learn-layout">
+            <div>
+                <article class="content-card">
+                    <h2>Market capitalization</h2>
+                    <p><strong>Market cap</strong> is the coin’s current price multiplied by how many coins are in circulation. A coin at $1 with a billion coins in supply can be larger than a $100 coin with a small supply.</p>
+                    <p>Comparing market caps is often more useful than comparing raw prices when you want a sense of overall size.</p>
+                </article>
+
+                <article class="content-card">
+                    <h2>24-hour volume</h2>
+                    <p><strong>Volume</strong> is how much of the asset was traded over the last day (in USD on CryptoPulse). Higher volume usually means it is easier to buy or sell without moving the price as much.</p>
+                    <p>A sharp price move on very low volume is often less meaningful than a move backed by heavy trading.</p>
+                </article>
+
+                <article class="content-card">
+                    <h2>24-hour change</h2>
+                    <p>The <strong>percentage change</strong> shows how far the price moved compared with about 24 hours ago. Green is up; red is down.</p>
+                    <p>Short-term swings are common in crypto. Use change as a signal to look closer, not as a complete investment thesis.</p>
+                </article>
+
+                <article class="content-card">
+                    <h2>Why price alone is not enough</h2>
+                    <p>Two coins can share a similar price while differing hugely in market cap and liquidity. Always check size (market cap) and activity (volume) alongside the price and its daily change.</p>
+                    <p>CryptoPulse is for education and market awareness — not financial advice.</p>
+                </article>
+            </div>
+
+            <aside>
+                <section class="content-card">
+                    <h2>Contact us</h2>
+                    <p>Questions about the site or the metrics? Send a message. Your details are shown on the next page from the URL (no server storage).</p>
+
+                    <form id="contact-form" class="form-grid two-col" action="thankyou.html" method="get">
+                        <label for="name">Name
+                            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" title="Your full name">
+                        </label>
+
+                        <label for="email">Email
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" title="A valid email address">
+                        </label>
+
+                        <label for="topic" class="full-width">Topic
+                            <select id="topic" name="topic" required>
+                                <option value="">Select a topic</option>
+                                <option value="Market data">Market data</option>
+                                <option value="Watchlist">Watchlist</option>
+                                <option value="Metrics explained">Metrics explained</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+
+                        <label for="message" class="full-width">Message
+                            <textarea id="message" name="message" required minlength="10" placeholder="How can we help?" title="At least 10 characters"></textarea>
+                        </label>
+
+                        <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                        <button type="submit" class="btn btn-primary full-width">Send message</button>
+                    </form>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <p><strong>CryptoPulse</strong></p>
+                <p>Thubelihle Dlamini</p>
+            </div>
+            <div class="footer-center">
+                <p><a href="#demo-video">Project demo video (replace with your URL)</a></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; <span id="currentyear"></span> CryptoPulse</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
