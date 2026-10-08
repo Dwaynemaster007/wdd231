@@ -3,24 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attributions | CryptoPulse</title>
-    <meta name="description" content="Sources and attributions for CryptoPulse data and assets.">
+    <title>Attributions | CryptoPulse Sources and Credits</title>
+    <meta name="description" content="Sources and attributions for CryptoPulse market data, fonts, and project assets used in this site.">
     <meta name="author" content="Thubelihle Dlamini">
+
+    <meta property="og:title" content="Attributions | CryptoPulse Sources and Credits">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Sources and attributions for CryptoPulse market data, fonts, and project assets used in this site.">
+    <meta property="og:url" content="https://dwaynemaster007.github.io/wdd231/finalproject/attributions.html">
+    <meta property="og:image" content="https://dwaynemaster007.github.io/wdd231/finalproject/images/og-cover.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
-    <main style="padding-top:2rem;">
-        <article class="content-card">
-            <h1>Attributions</h1>
+    <header>
+        <div class="logo-container">
+            <span class="logo-mark" aria-hidden="true">CP</span>
+            <span class="site-name">CryptoPulse</span>
+        </div>
+        <button id="nav-button" class="hamburger" aria-label="Toggle Navigation"></button>
+        <nav id="nav-bar" class="navigation">
             <ul>
-                <li>Market data: <a href="https://www.coingecko.com/en/api" target="_blank" rel="noopener">CoinGecko API</a> (public endpoints). Local fallback snapshot included for offline or rate-limit cases.</li>
-                <li>Coin logos: served by CoinGecko image CDN as returned by the API.</li>
+                <li><a href="index.html">Market</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="learn.html">Learn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Attributions</h1>
+                <p>Credits for data, fonts, and assets used on CryptoPulse.</p>
+            </div>
+        </section>
+
+        <article class="content-card">
+            <h2>Sources</h2>
+            <ul>
+                <li>Market data: <a href="https://www.coingecko.com/en/api" target="_blank" rel="noopener">CoinGecko API</a> (public endpoints). A local fallback snapshot is included for offline or rate-limit cases.</li>
+                <li>Coin logos: served by the CoinGecko image CDN as returned by the API.</li>
                 <li>Fonts: <a href="https://fonts.google.com/specimen/Space+Grotesk" target="_blank" rel="noopener">Space Grotesk</a> and <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">Inter</a> via Google Fonts.</li>
                 <li>Site design and code: Thubelihle Dlamini — WDD 231 individual project.</li>
             </ul>
-            <p><a href="index.html">← Back to CryptoPulse</a></p>
+            <p><a class="action action-fill" href="index.html">Back to market</a></p>
         </article>
     </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <p><strong>CryptoPulse</strong></p>
+                <p>Thubelihle Dlamini</p>
+            </div>
+            <div class="footer-center">
+                <p><a href="#demo-video">Project demo video (replace with your URL)</a></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; <span id="currentyear"></span> CryptoPulse</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

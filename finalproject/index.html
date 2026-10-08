@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <script src="scripts/navigation.js" defer></script>
@@ -46,10 +47,12 @@
                 <p>Live prices, 24-hour moves, market cap, and volume for the top cryptocurrencies — no trading account required.</p>
             </div>
             <div class="hero-actions">
-                <a class="btn btn-primary" href="watchlist.html">My Watchlist</a>
-                <a class="btn btn-secondary" href="learn.html">Learn the metrics</a>
+                <a class="action action-fill" href="watchlist.html">My Watchlist</a>
+                <a class="action action-outline" href="learn.html">Learn the metrics</a>
             </div>
         </section>
+
+        <img class="brand-banner" src="images/og-cover.svg" alt="CryptoPulse live cryptocurrency market data banner" width="1200" height="630" loading="lazy">
 
         <div class="section-head">
             <h2>Top markets</h2>
@@ -63,9 +66,9 @@
 
     <dialog id="coin-dialog" aria-labelledby="dialog-title">
         <div class="dialog-body">
-            <div id="dialog-body"></div>
+            <div id="dialog-content"></div>
             <div class="dialog-actions">
-                <button type="button" id="dialog-close" class="btn btn-primary">Close</button>
+                <button type="button" id="dialog-close" class="action action-fill">Close</button>
             </div>
         </div>
     </dialog>

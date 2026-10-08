@@ -11,9 +11,9 @@ async function init() {
     if (ids.length === 0) {
         statusEl.textContent = "Your watchlist is empty.";
         grid.innerHTML = `
-            <div class="empty-state content-card" style="grid-column:1/-1;">
+            <div class="empty-state content-card wide">
                 <p>No coins saved yet.</p>
-                <p><a class="btn btn-primary" href="index.html">Browse the market</a></p>
+                <p><a class="action action-fill" href="index.html">Browse the market</a></p>
             </div>
         `;
         return;
@@ -23,8 +23,6 @@ async function init() {
 
     const { coins, source } = await fetchMarketData();
     const watched = coins.filter((c) => ids.includes(c.id));
-
-    // Keep any watched ids that might not be in top-20 by showing a note
     const missing = ids.filter((id) => !watched.some((c) => c.id === id));
 
     statusEl.textContent = `${watched.length} coin(s) on your watchlist · ${source}`;
@@ -36,9 +34,9 @@ async function init() {
 
     if (watched.length === 0) {
         grid.innerHTML = `
-            <div class="empty-state content-card" style="grid-column:1/-1;">
+            <div class="empty-state content-card wide">
                 <p>Saved coins are not in the current market snapshot.</p>
-                <p><a class="btn btn-primary" href="index.html">Back to market</a></p>
+                <p><a class="action action-fill" href="index.html">Back to market</a></p>
             </div>
         `;
         return;
@@ -50,12 +48,14 @@ async function init() {
         const card = document.createElement("article");
         card.className = "coin-card";
         card.innerHTML = `
-            <img src="${coin.image}" alt="${coin.name} logo" width="40" height="40" loading="lazy">
-            <div class="coin-info">
-                <h3>${coin.name}</h3>
-                <span class="symbol">${coin.symbol}</span>
+            <div class="coin-top">
+                <img src="${coin.image}" alt="${coin.name} logo" width="40" height="40" loading="lazy">
+                <div class="coin-info">
+                    <h3>${coin.name}</h3>
+                    <span class="symbol">${coin.symbol}</span>
+                </div>
+                <span class="coin-change ${changeClass}">${formatChange(change)}</span>
             </div>
-            <span class="metric value ${changeClass}">${formatChange(change)}</span>
             <div class="coin-metrics">
                 <div class="metric">
                     <label>Price</label>
@@ -75,7 +75,7 @@ async function init() {
                 </div>
             </div>
             <div class="coin-actions">
-                <button type="button" class="btn btn-ghost btn-sm remove-btn" data-id="${coin.id}">Remove</button>
+                <button type="button" class="action action-quiet action-compact remove-btn" data-id="${coin.id}">Remove</button>
             </div>
         `;
         grid.appendChild(card);
@@ -83,9 +83,9 @@ async function init() {
 }
 
 grid.addEventListener("click", (event) => {
-    const btn = event.target.closest(".remove-btn");
-    if (!btn) return;
-    toggleWatch(btn.dataset.id);
+    const removeBtn = event.target.closest(".remove-btn");
+    if (!removeBtn) return;
+    toggleWatch(removeBtn.dataset.id);
     init();
 });
 

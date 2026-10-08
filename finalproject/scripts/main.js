@@ -4,7 +4,7 @@ import { isWatched, toggleWatch } from "./storage.js";
 const grid = document.querySelector("#coin-grid");
 const statusEl = document.querySelector("#market-status");
 const dialog = document.querySelector("#coin-dialog");
-const dialogBody = document.querySelector("#dialog-body");
+const dialogBody = document.querySelector("#dialog-content");
 const dialogClose = document.querySelector("#dialog-close");
 
 let coinsCache = [];
@@ -33,12 +33,14 @@ function renderCoins(coins) {
         const watched = isWatched(coin.id);
 
         card.innerHTML = `
-            <img src="${coin.image}" alt="${coin.name} logo" width="40" height="40" loading="lazy">
-            <div class="coin-info">
-                <h3>${coin.name}</h3>
-                <span class="symbol">${coin.symbol}</span>
+            <div class="coin-top">
+                <img src="${coin.image}" alt="${coin.name} logo" width="40" height="40" loading="lazy">
+                <div class="coin-info">
+                    <h3>${coin.name}</h3>
+                    <span class="symbol">${coin.symbol}</span>
+                </div>
+                <span class="coin-change ${changeClass}">${formatChange(change)}</span>
             </div>
-            <span class="metric value ${changeClass}">${formatChange(change)}</span>
             <div class="coin-metrics">
                 <div class="metric">
                     <label>Price</label>
@@ -58,8 +60,8 @@ function renderCoins(coins) {
                 </div>
             </div>
             <div class="coin-actions">
-                <button type="button" class="btn btn-primary btn-sm details-btn" data-id="${coin.id}">Details</button>
-                <button type="button" class="btn btn-ghost btn-sm watch-btn" data-id="${coin.id}">
+                <button type="button" class="action action-fill action-compact details-btn" data-id="${coin.id}">Details</button>
+                <button type="button" class="action action-quiet action-compact watch-btn" data-id="${coin.id}">
                     ${watched ? "★ Watching" : "☆ Watch"}
                 </button>
             </div>
@@ -90,8 +92,8 @@ function openDialog(coin) {
     const changeClass = change >= 0 ? "positive" : "negative";
 
     dialogBody.innerHTML = `
-        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
-            <img src="${coin.image}" alt="" width="48" height="48" style="border-radius:50%;">
+        <div class="dialog-head">
+            <img src="${coin.image}" alt="" width="48" height="48">
             <div>
                 <h2 id="dialog-title">${coin.name}</h2>
                 <span class="symbol">${coin.symbol.toUpperCase()} · Rank #${coin.market_cap_rank ?? "—"}</span>
@@ -105,7 +107,7 @@ function openDialog(coin) {
             <p><strong>24h High:</strong> ${formatPrice(coin.high_24h)}</p>
             <p><strong>24h Low:</strong> ${formatPrice(coin.low_24h)}</p>
         </div>
-        <p style="font-size:0.85rem;color:#6b7280;">
+        <p class="dialog-note">
             Market cap reflects total value of circulating supply. Volume shows how much traded in 24 hours.
             Price alone does not tell the full story — size and liquidity matter.
         </p>
