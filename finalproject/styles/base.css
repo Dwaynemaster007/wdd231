@@ -19,7 +19,7 @@ h1, h2, h3, .site-name, button, .action {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: #0d9b6a; text-decoration: none; }
+a { color: #0a7a52; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 header {
@@ -259,7 +259,7 @@ main {
     overflow-wrap: anywhere;
 }
 
-.positive { color: #0d9b6a; }
+.positive { color: #0a7a52; }
 .negative { color: #c62828; }
 
 .content-card {
@@ -308,7 +308,7 @@ main {
 .form-grid input:focus,
 .form-grid textarea:focus,
 .form-grid select:focus {
-    outline: 2px solid #0d9b6a;
+    outline: 2px solid #0a7a52;
 }
 
 .form-grid input:invalid:not(:placeholder-shown) { border-color: #c62828; }
