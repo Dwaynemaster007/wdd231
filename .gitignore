@@ -1,0 +1,6 @@
+.DS_Store
+__MACOSX/
+*.zip
+Thumbs.db
+.vscode/
+node_modules/
