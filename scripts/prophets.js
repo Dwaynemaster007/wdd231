@@ -2,9 +2,17 @@ const url = 'https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.
 const cards = document.querySelector('#cards');
 
 async function getProphetData() {
-  const response = await fetch(url);
-  const data = await response.json();
-  displayProphets(data.prophets);
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    displayProphets(data.prophets);
+  } catch (error) {
+    console.error('Could not load prophet data:', error);
+    cards.innerHTML = '<p>Sorry, the prophet data could not be loaded. Please try again later.</p>';
+  }
 }
 
 const displayProphets = (prophets) => {
